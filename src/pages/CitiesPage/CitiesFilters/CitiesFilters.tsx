@@ -1,5 +1,5 @@
 import "./CitiesFilters.sass"
-import SearchBar from "../../../SearchBar/SearchBar";
+import SearchBar from "../../../components/SearchBar/SearchBar";
 import {useCities} from "../../../hooks/cities/useCities";
 
 const CitiesFilters = () => {

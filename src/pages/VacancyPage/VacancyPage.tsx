@@ -82,11 +82,10 @@ const VacancyPage = () => {
                 <div className="vacancy-info-container">
                     <span>Статус: {STATUSES.find(status => status.id == vacancy.status).name}</span>
                     <span>Дата создания: {moment(vacancy.date_created).locale(ru()).format("D MMMM HH:mm")}</span>
-                    {[2, 3, 4].includes(vacancy.status) && <span>Дата формирования: {moment(vacancy.date_of_formation).locale(ru()).format("D MMMM HH:mm")}</span>}
+                    {[2, 3, 4].includes(vacancy.status) && <span>Дата формирования: {moment(vacancy.date_formation).locale(ru()).format("D MMMM HH:mm")}</span>}
                     {completed && <span>Дата завершения: {moment(vacancy.date_complete).locale(ru()).format("D MMMM HH:mm")}</span> }
                     {is_moderator && <span>Покупатель: {vacancy.owner.name}</span> }
                     {is_moderator && <span>Модератор: {vacancy.moderator.name}</span>}
-                    {completed && <span>Дата доставки: {vacancy.delivery_date > 0 ? pluralDeliveryDate(vacancy.delivery_date) : "Нет"}</span>}
                 </div>
 
                 {is_draft &&
