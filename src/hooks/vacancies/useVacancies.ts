@@ -47,11 +47,10 @@ export function useVacancies() {
 			}
 		})
 
-		// data = data.filter(vacancy => vacancy.employer.name.includes(user))
-
-		return data
+		return data.filter(vacancy => vacancy.employer.name.includes(user))
 
 	}
+
 
 	return {
 		status,

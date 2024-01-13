@@ -8,13 +8,21 @@
 	overflow: hidden
 	min-height: 400px
 
+.table-wrapperr
+	display: flex
+	flex-direction: column
+	width: 100%
+	background: #fff
+	overflow: hidden
+	min-height: 400px
+	overflow-x: auto
 	table
 		width: 100%
 		border-collapse: collapse
 
 		thead
 			tr
-				background-color: $secondary
+				background-color: $primary
 
 				th
 					padding: 20px
@@ -28,7 +36,8 @@
 				cursor: pointer
 
 				&:hover
-					background-color: lightskyblue
+					background-color: $secondary
+					color: #fff
 
 				td
 					padding: 10px

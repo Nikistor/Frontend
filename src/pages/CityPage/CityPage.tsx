@@ -48,7 +48,7 @@ const CityPage = () => {
 
                     <br />
 
-                    <span className="foundation_date">Год основания: {city.foundation_date}г</span>
+                    <span className="foundation_date">Год основания: {city.foundation_date} г.</span>
 
                     <br />
 

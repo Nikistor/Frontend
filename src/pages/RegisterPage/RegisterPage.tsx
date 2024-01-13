@@ -47,7 +47,7 @@ const RegisterPage = () => {
             <form className="inputs-container" onSubmit={handleSubmit}>
 
                 <div className="input-item">
-                    <input type="email" name="email" placeholder="Почта" required/>
+                    <input type="email" name="email" placeholder="Логин" required/>
                 </div>
 
                 <div className="input-item">

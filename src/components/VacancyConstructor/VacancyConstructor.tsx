@@ -17,7 +17,7 @@ const VacancyConstructor = () => {
     return (
         <Link to={`/vacancies/${vacancy.id}`} className="constructor-container">
             <span className="title">Новая вакансия</span>
-            {vacancy.cities.length > 0 && <span className="badge">{vacancy.cities.length}</span>}
+            {/*{vacancy.cities.length > 0 && <span className="badge"></span>}*/}
         </Link>
     )
 }

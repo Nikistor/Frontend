@@ -15,6 +15,9 @@ import {useAuth} from "./hooks/users/useAuth";
 import VacancyConstructor from "./components/VacancyConstructor/VacancyConstructor";
 import VacancyPage from "./pages/VacancyPage/VacancyPage";
 import VacanciesPage from "./pages/VacanciesPage/VacanciesPage";
+import CityEditPage from "./pages/CityEditPage/CityEditPage";
+import CityAddPage from "./pages/CityAddPage/CityAddPage";
+import CitiesTableWrapper from "./pages/CitiesPage/CitiesTableWrapper/CitiesTableWrapper";
 
 
 const TopPanelWrapper = () => {
@@ -26,7 +29,7 @@ const TopPanelWrapper = () => {
     return (
         <div className="top-panel-wrapper">
             <Breadcrumbs />
-            {is_authenticated && !is_moderator && location.pathname.endsWith("cities") && <VacancyConstructor /> }
+            {is_authenticated && location.pathname.endsWith("cities") && <VacancyConstructor /> }
         </div>
     )
 }
@@ -63,6 +66,10 @@ function App() {
 
                                     <Route path="/cities/:id" element={<CityPage />} />
 
+                                    <Route path="/cities/:id/edit" element={<CityEditPage />} />
+
+                                    <Route path="/cities/create" element={<CityAddPage />} />
+
                                     <Route path="/profile" element={<ProfilePage />} />
 
                                     <Route path="/vacancies/:id" element={<VacancyPage />} />
@@ -72,6 +79,8 @@ function App() {
                                     <Route path="/login" element={<LoginPage />} />
 
                                     <Route path="/register" element={<RegisterPage />} />
+
+                                    <Route path="/cities_table" element={<CitiesTableWrapper />} />
 
                                 </Routes>
 

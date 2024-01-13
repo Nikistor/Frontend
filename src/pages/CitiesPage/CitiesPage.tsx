@@ -1,7 +1,7 @@
 import "./CitiesPage.sass"
 import {useAuth} from "../../hooks/users/useAuth";
 import CitiesList from "./CitiesList/CitiesList";
-import CitiesFilters from "./CitiesFilters/CitiesFilters";
+import CitiesTableWrapper from "./CitiesTableWrapper/CitiesTableWrapper";
 
 const CitiesPage = () => {
 
@@ -10,9 +10,9 @@ const CitiesPage = () => {
     return (
         <div className="cities-wrapper">
 
-            <CitiesFilters />
-
-            {!is_moderator && <CitiesList />}
+            {/*{!is_moderator && <CitiesList />}*/}
+            {/*{is_moderator && <CitiesTableWrapper />}*/}
+            {<CitiesList />}
 
         </div>
     )

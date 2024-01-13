@@ -5,16 +5,19 @@ import {useAuth} from "../../hooks/users/useAuth";
 import {useVacancy} from "../../hooks/vacancies/useVacancy";
 import CustomButton from "../CustomButton/CustomButton";
 import {variables} from "../../utils/consts";
+import {useCities} from "../../hooks/cities/useCities";
 
 const CityCard = ({ city }: {city:City}) => {
-    
+    const {searchCities}=useCities()
     const {is_authenticated, is_moderator} = useAuth()
 
     const {vacancy, is_draft, addCityToVacancy, deleteCityFromVacancy} = useVacancy()
 
-    const handleAddCity = (e) => {
-        e.preventDefault()
-        addCityToVacancy(city)
+    const handleAddCity = async (e) => {
+         e.preventDefault()
+        await addCityToVacancy(city)
+        await searchCities()
+
     }
 
     const handleDeleteCity = (e) => {
@@ -41,12 +44,12 @@ const CityCard = ({ city }: {city:City}) => {
                 <div className="content-bottom">
 
                     <Link to={`/cities/${city.id}`}>
-                        <CustomButton bg={variables.blue}>
+                        <CustomButton bg={variables.primary}>
                             Подробнее
                         </CustomButton>
                     </Link>
                     
-                    {is_authenticated && !is_chosen && !is_moderator && location.pathname.includes("cities") &&
+                    {is_authenticated && !is_chosen && location.pathname.includes("cities") &&
                         <CustomButton onClick={handleAddCity} bg={variables.green}>Добавить</CustomButton>
                     }
 
@@ -54,7 +57,7 @@ const CityCard = ({ city }: {city:City}) => {
                         <CustomButton onClick={handleDeleteCity} bg={variables.red} >Удалить</CustomButton>
                     }
 
-                    {is_authenticated && !is_moderator && is_draft && location.pathname.includes("vacancies") &&
+                    {is_authenticated && is_draft && location.pathname.includes("vacancies") &&
                         <CustomButton onClick={handleDeleteCity} bg={variables.red}>Удалить</CustomButton>
                     }
 

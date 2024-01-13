@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee1f4ec5-fd11-4dec-971a-c15c352262db" name="Changes" comment="" />
+    <list default="true" id="46ca80bb-e777-4a01-9dd6-a118379c3fda" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +10,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2aMgI3G4cZ32c1BUIv6YAoX8a9R" />
+  <component name="ProjectId" id="2actYT42f21hijtigtldy0bnVpi" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -20,19 +20,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Работа/МГТУ им. Н.Э.Баумана/Разработка интернет приложений/lab6/work",
+    "last_opened_file_path": "D:/Работа/МГТУ им. Н.Э.Баумана/Разработка интернет приложений/lab5/work",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\Работа\\МГТУ им. Н.Э.Баумана\\Разработка интернет приложений\\lab6\\work\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+    "ts.external.directory.path": "D:\\Работа\\МГТУ им. Н.Э.Баумана\\Разработка интернет приложений\\DZ\\node_modules\\typescript\\lib"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\jmiha\YandexDisk\Вуз\РИП\Заказы\Перевощиков\Лаб №6\work\src\components" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -48,18 +42,20 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ee1f4ec5-fd11-4dec-971a-c15c352262db" name="Changes" comment="" />
-      <created>1704133778751</created>
+      <changelist id="46ca80bb-e777-4a01-9dd6-a118379c3fda" name="Changes" comment="" />
+      <created>1704629742341</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1704133778751</updated>
-      <workItem from="1704133780003" duration="8000" />
-      <workItem from="1704361606828" duration="6000" />
-      <workItem from="1704389621605" duration="732000" />
-      <workItem from="1704391071888" duration="118000" />
-      <workItem from="1704543105755" duration="748000" />
-      <workItem from="1704543941701" duration="3267000" />
-      <workItem from="1704553785652" duration="640000" />
+      <updated>1704629742341</updated>
+      <workItem from="1704629743635" duration="1868000" />
+      <workItem from="1704633241377" duration="650000" />
+      <workItem from="1704909334639" duration="2000" />
+      <workItem from="1704958983995" duration="2597000" />
+      <workItem from="1705046798095" duration="3597000" />
+      <workItem from="1705066542520" duration="8330000" />
+      <workItem from="1705146607123" duration="489000" />
+      <workItem from="1705150536767" duration="838000" />
+      <workItem from="1705162001273" duration="1456000" />
     </task>
     <servers />
   </component>
