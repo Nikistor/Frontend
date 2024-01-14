@@ -1,8 +1,7 @@
 import "./SearchBar.sass"
-import CustomButton from "../CustomButton/CustomButton";
-import {variables} from "../../utils/consts";
+import {FaSearch} from "react-icons/fa";
 
-const SearchBar = ({ query, setQuery, placeholder, onSubmit }) => {
+const SearchBar = ({ query, setQuery, onSubmit }) => {
 
     const handleChange = (value: string) => {
         setQuery(value)
@@ -10,22 +9,27 @@ const SearchBar = ({ query, setQuery, placeholder, onSubmit }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+
         onSubmit()
     }
 
     return (
-        <div className="search-bar-wrapper">
+        <form className="search-bar-wrapper" onSubmit={handleSubmit} >
 
             <input
                 type="text"
-                placeholder={placeholder}
+                placeholder="Поиск..."
                 name="name"
                 autoComplete="off"
                 value={query}
                 onChange={(e) => handleChange(e.target.value)}
             />
 
-        </div>
+            <button type="submit">
+                <FaSearch className={"search-icon"}/>
+            </button>
+
+        </form>
     )
 }
 

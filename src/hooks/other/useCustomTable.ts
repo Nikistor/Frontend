@@ -7,8 +7,7 @@ export const useCustomTable = (columns, isSuccess, data) => {
 
     const tableInstance = useTable({
         columns:tableColumns,
-        data: isSuccess ? data : [],
-        initialState: { pageSize: 25 }
+        data: isSuccess ? data : []
     }, usePagination)
 
     const {

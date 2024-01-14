@@ -1,41 +1,24 @@
 import "./CitiesList.sass"
+import {useEffect} from "react";
 import CityCard from "../../../components/CityCard/CityCard";
 import {useCities} from "../../../hooks/cities/useCities";
-import {useQuery} from "react-query";
-import CitiesFilters from "../CitiesFilters/CitiesFilters";
 
 const CitiesList = () => {
 
-    const {searchCities} = useCities()
+    const {cities, fetchCities} = useCities()
 
-    const { isLoading, data, refetch } = useQuery(
-        ["cities"],
-        () => searchCities(),
-        {
-            keepPreviousData: true,
-        }
-    )
+    useEffect(() => {
+        fetchCities()
+    }, [])
 
-    if (isLoading) {
-        return (
-            <div>
-
-            </div>
-        )
-    }
-
-    const cards = data.map(city  => (
+    const cards = cities.map(city  => (
         <CityCard city={city} key={city.id}/>
     ))
 
     return (
-        <div className="cities-list-wrapper">
+        <div className="cities-list">
 
-            <CitiesFilters refetch={refetch} />
-
-            <div className="cities-list">
-                { cards }
-            </div>
+            { cards }
 
         </div>
     )

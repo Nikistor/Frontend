@@ -5,16 +5,14 @@ import {useAuth} from "../../../hooks/users/useAuth";
 import {useVacancies} from "../../../hooks/vacancies/useVacancies";
 import CustomDatePicker from "../../../components/CustomDatePicker/CustomDatePicker";
 import CustomButton from "../../../components/CustomButton/CustomButton";
-import SearchBar from "../../../components/SearchBar/SearchBar";
 
 const VacanciesFilters = ({refetch}) => {
 
     const {is_moderator} = useAuth()
 
-    const {status, setStatus, date_start, setDateStart, date_end, setDateEnd, user, setUser} = useVacancies()
+    const {status, setStatus, date_start, setDateStart, date_end, setDateEnd} = useVacancies()
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const handleSubmit = () => {
         refetch()
     }
 
@@ -23,11 +21,15 @@ const VacanciesFilters = ({refetch}) => {
 
             <div className="top-container">
 
-                <h3>Список вакансий</h3>
+                <h3>Список заказов</h3>
 
             </div>
 
-            <form className="bottom-container" onSubmit={handleSubmit}>
+            <div className="bottom-container">
+
+                <CustomDatePicker placeholder="От" value={date_start} setValue={setDateStart}/>
+
+                <CustomDatePicker placeholder="До" value={date_end} setValue={setDateEnd}/>
 
                 <DropdownMenu
                     width={175}
@@ -38,17 +40,11 @@ const VacanciesFilters = ({refetch}) => {
                     }}
                 />
 
-                <CustomDatePicker placeholder="От" value={date_start} setValue={setDateStart}/>
+                <CustomButton bg={variables.blue} onClick={handleSubmit}>
+                    Применить
+                </CustomButton>
 
-                <CustomDatePicker placeholder="До" value={date_end} setValue={setDateEnd}/>
-
-                {is_moderator && <SearchBar query={user} setQuery={setUser} placeholder="Поиск по пользователям..." onSubmit={handleSubmit} />}
-
-                {/*<CustomButton bg={variables.primary}>*/}
-                {/*    Применить*/}
-                {/*</CustomButton>*/}
-
-            </form>
+            </div>
 
         </div>
     )

@@ -7,6 +7,7 @@ import {useAuth} from "../../hooks/users/useAuth";
 import {STATUSES, variables} from "../../utils/consts";
 import {ru} from "../../utils/momentLocalization";
 import moment from "moment";
+import {pluralDeliveryDate} from "../../utils/plural";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import CustomInput from "../../components/CustomInput/CustomInput";
 
@@ -25,7 +26,6 @@ const VacancyPage = () => {
         
         return () => {
             setVacancy(undefined)
-            setName("")
         };
     }, [])
 
@@ -59,7 +59,7 @@ const VacancyPage = () => {
 
                 <CustomButton onClick={saveVacancy} bg={variables.green}>Сохранить</CustomButton>
 
-                <CustomButton onClick={onSendVacancy} bg={variables.primary}>Отправить</CustomButton>
+                <CustomButton onClick={onSendVacancy} bg={variables.blue}>Отправить</CustomButton>
 
                 <CustomButton onClick={onDeleteVacancy} bg={variables.red}>Удалить</CustomButton>
 
@@ -70,17 +70,6 @@ const VacancyPage = () => {
     const is_draft = vacancy.status == 1
 
     const completed = [3, 4].includes(vacancy.status)
-
-    const bankrupt = () => {
-        if (vacancy.bankrupt == -1){
-            return "Не найден"
-        }
-        else if (vacancy.bankrupt == 0){
-            return "Нет"
-        }
-
-        return "Да"
-    }
 
     return (
         <div className="vacancy-page-wrapper">
@@ -95,8 +84,8 @@ const VacancyPage = () => {
                     <span>Дата создания: {moment(vacancy.date_created).locale(ru()).format("D MMMM HH:mm")}</span>
                     {[2, 3, 4].includes(vacancy.status) && <span>Дата формирования: {moment(vacancy.date_formation).locale(ru()).format("D MMMM HH:mm")}</span>}
                     {completed && <span>Дата завершения: {moment(vacancy.date_complete).locale(ru()).format("D MMMM HH:mm")}</span> }
-                    {is_moderator && <span>Пользователь: {vacancy.employer.name}</span> }
-                    {completed && <span>Банкрот: {bankrupt()}</span>}
+                    {is_moderator && <span>Пользователь: {vacancy.owner.name}</span> }
+                    {is_moderator && <span>Модератор: {vacancy.moderator.name}</span>}
                 </div>
 
                 {is_draft &&
@@ -115,7 +104,7 @@ const VacancyPage = () => {
                 </div>
             </div>
 
-            {is_draft && <ButtonsContainer />}
+            {!is_moderator && is_draft && <ButtonsContainer />}
 
         </div>
     )

@@ -63,7 +63,7 @@ export const USER_STATUSES : Option[] = [
 
 
 export const variables = {
-    primary: "#8f94fb",
+    blue: "orange",
     green: "#568203",
     red: "#ff5252"
 }

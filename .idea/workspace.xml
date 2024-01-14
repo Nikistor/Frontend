@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46ca80bb-e777-4a01-9dd6-a118379c3fda" name="Changes" comment="" />
+    <list default="true" id="ee1f4ec5-fd11-4dec-971a-c15c352262db" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,23 +10,29 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2actYT42f21hijtigtldy0bnVpi" />
+  <component name="ProjectId" id="2aMgI3G4cZ32c1BUIv6YAoX8a9R" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Работа/МГТУ им. Н.Э.Баумана/Разработка интернет приложений/lab5/work",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\Работа\\МГТУ им. Н.Э.Баумана\\Разработка интернет приложений\\DZ\\node_modules\\typescript\\lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Работа/МГТУ им. Н.Э.Баумана/Разработка интернет приложений/lab6/work&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Работа\\МГТУ им. Н.Э.Баумана\\Разработка интернет приложений\\lab6\\work\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jmiha\YandexDisk\Вуз\РИП\Заказы\Перевощиков\Лаб №6\work\src\components" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -42,20 +48,18 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="46ca80bb-e777-4a01-9dd6-a118379c3fda" name="Changes" comment="" />
-      <created>1704629742341</created>
+      <changelist id="ee1f4ec5-fd11-4dec-971a-c15c352262db" name="Changes" comment="" />
+      <created>1704133778751</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1704629742341</updated>
-      <workItem from="1704629743635" duration="1868000" />
-      <workItem from="1704633241377" duration="650000" />
-      <workItem from="1704909334639" duration="2000" />
-      <workItem from="1704958983995" duration="2597000" />
-      <workItem from="1705046798095" duration="3597000" />
-      <workItem from="1705066542520" duration="8330000" />
-      <workItem from="1705146607123" duration="489000" />
-      <workItem from="1705150536767" duration="838000" />
-      <workItem from="1705162001273" duration="1456000" />
+      <updated>1704133778751</updated>
+      <workItem from="1704133780003" duration="8000" />
+      <workItem from="1704361606828" duration="6000" />
+      <workItem from="1704908723368" duration="566000" />
+      <workItem from="1704909324763" duration="13000" />
+      <workItem from="1704957656541" duration="1285000" />
+      <workItem from="1705039160660" duration="1504000" />
+      <workItem from="1705073585760" duration="125000" />
     </task>
     <servers />
   </component>

@@ -24,8 +24,8 @@ const CustomTable = ({getTableBodyProps, headerGroups, page, prepareRow, isLoadi
 
     return (
         <div className="table-wrapper">
+
             { children }
-            <div className="table-wrapperr">
 
             <table>
                 <thead>
@@ -59,7 +59,6 @@ const CustomTable = ({getTableBodyProps, headerGroups, page, prepareRow, isLoadi
                 </tbody>
             </table>
 
-            </div>
         </div>
 
     )
