@@ -77,19 +77,19 @@ const CityPage = ({ selectedCity, setSelectedCity }: { selectedCity:City | undef
 
                     <br />
 
-                    <span className="foundation_date">Год основания: {selectedCity?.foundation_date}г</span>
+                    <span>Год основания: {selectedCity?.foundation_date}г</span>
 
                     <br />
 
-                    <span className="grp">Население: {selectedCity?.grp} млн</span>
+                    <span>Население: {selectedCity?.grp} млн</span>
 
                     <br />
 
-                    <span className="square">Площадь: {selectedCity?.square} км^2</span>
+                    <span>Площадь: {selectedCity?.square} км^2</span>
 
                     <br />
 
-                    <span className="climate">Климат: {selectedCity?.climate}</span>
+                    <span>Климат: {selectedCity?.climate}</span>
 
                 </div>
 

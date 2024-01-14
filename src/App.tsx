@@ -14,7 +14,7 @@ function App() {
     const [selectedCity, setSelectedCity] = useState<City | undefined>(undefined)
 
     return (
-        <BrowserRouter basename="/work">
+        <BrowserRouter basename="/Frontend">
 
             <div className="App">
 
