@@ -57,8 +57,6 @@ const VacancyPage = () => {
         return (
             <div className="buttons-wrapper">
 
-                <CustomButton onClick={saveVacancy} bg={variables.green}>Сохранить</CustomButton>
-
                 <CustomButton onClick={onSendVacancy} bg={variables.blue}>Отправить</CustomButton>
 
                 <CustomButton onClick={onDeleteVacancy} bg={variables.red}>Удалить</CustomButton>
