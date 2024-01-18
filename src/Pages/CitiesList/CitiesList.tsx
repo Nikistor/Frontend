@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import CityCard from "./CityCard/CityCard";
 import {iCitiesMock, requestTime} from "../../Consts";
 import {City} from "../../Types";
+import SearchBarMock from "./SearchBar/SearchMock.tsx";
 
 const CitiesList = () => {
 
@@ -17,9 +18,9 @@ const CitiesList = () => {
 
         try {
 
-            const response = await fetch(`http://localhost:8000/api/cities/search?&name=${query}`, {
+            const response = await fetch(`/api/cities/search/?&name=${query}`, {
                 method: "GET",
-                signal: AbortSignal.timeout(requestTime)
+                signal: new AbortSignal.timeout(requestTime)
             })
 
             if (!response.ok){
@@ -27,7 +28,9 @@ const CitiesList = () => {
                 return;
             }
 
-            const cities: City[] = await response.json()
+            const responseData  = await response.json();
+
+            const cities: City[] = responseData.cities || [];
 
             setCities(cities)
             setIsMock(false)
@@ -42,26 +45,55 @@ const CitiesList = () => {
     const createMock = () => {
 
         setIsMock(true);
-        setCities(iCitiesMock)
+        setCities(iCitiesMock);
 
     }
 
     useEffect(() => {
-        searchCities()
-    }, [query])
+
+        const fetchData = async () => {
+            try {
+                await searchCities();
+
+            } catch (error) {
+                console.error("Error in fetchData:", error);
+            }
+        };
+
+        fetchData();
+
+        return () => {
+
+            const controller = new AbortController();
+            controller.abort();
+        };
+    }, [query]);
+
+    useEffect(() => {
+    }, [isMock]);
+
+    const searchCitiesMock = (searchTerm: string) => {
+        const searchTermLowerCase = searchTerm.toLowerCase();
+        const filteredCities = iCitiesMock.filter((city) =>
+            city.name.toLowerCase().includes(searchTermLowerCase)
+        );
+        setCities(filteredCities);
+    };
+
 
     const cards = cities.map(city  => (
-        <CityCard city={city} key={city.id} isMock={isMock}/>
+        <CityCard city={city} key={city.id} isMock={isMock} />
     ))
-
     return (
+
         <div className="cards-list-wrapper">
 
             <div className="top">
 
                 <h2>Поиск городов</h2>
+                {isMock ? <SearchBarMock onSearch={searchCitiesMock}/> : <SearchBar query={query} setQuery={setQuery}  />}
 
-                <SearchBar query={query} setQuery={setQuery} />
+
 
             </div>
 

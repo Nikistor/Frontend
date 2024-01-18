@@ -1,26 +1,32 @@
 import "./SearchBar.sass"
-import {Dispatch} from "react";
+import React, {Dispatch} from "react";
 import {FaSearch} from "react-icons/fa";
+interface SearchBarProps {
+    query: string;
+    setQuery: Dispatch<string>;
 
-const SearchBar = ({ query, setQuery }: {query:string, setQuery: Dispatch<string>}) => {
-
+}
+const SearchBar: React.FC<SearchBarProps> = ({ query, setQuery}) => {
     const handleChange = (value: string) => {
-        setQuery(value)
-    }
+        setQuery(value);
+
+
+    };
+
 
     return (
-        <form className="search-bar-wrapper" action="/api/cities/search" method="GET" onSubmit={(e) => e.preventDefault()} >
+        <form className="search-bar-wrapper"  method="GET" >
 
             <input
                 type="text"
                 placeholder="Поиск..."
                 name="name"
-                autoComplete="off"
+
                 value={query}
                 onChange={(e) => handleChange(e.target.value)}
             />
 
-            <button type="submit">
+            <button type="submit" >
                 <FaSearch className={"search-icon"}/>
             </button>
 

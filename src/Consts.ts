@@ -13,7 +13,7 @@ export const iCitiesMock:City[] = [
         foundation_date: 1147,
         grp: 13.1,
         climate: "умеренный",
-        square: 2561
+        square: 2511
     },
     {
         id: 2,
