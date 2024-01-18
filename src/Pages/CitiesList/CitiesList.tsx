@@ -20,7 +20,7 @@ const CitiesList = () => {
 
             const response = await fetch(`/api/cities/search/?&name=${query}`, {
                 method: "GET",
-                signal: new AbortSignal.timeout(requestTime)
+                signal: AbortSignal.timeout(requestTime)
             })
 
             if (!response.ok){
