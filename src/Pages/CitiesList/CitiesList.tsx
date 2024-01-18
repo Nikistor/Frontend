@@ -36,25 +36,19 @@ const CitiesList = () => {
             setIsMock(false)
 
         } catch (e) {
-
             createMock()
-
         }
     }
 
     const createMock = () => {
-
         setIsMock(true);
         setCities(iCitiesMock);
-
     }
 
     useEffect(() => {
-
         const fetchData = async () => {
             try {
                 await searchCities();
-
             } catch (error) {
                 console.error("Error in fetchData:", error);
             }
@@ -80,29 +74,19 @@ const CitiesList = () => {
         setCities(filteredCities);
     };
 
-
     const cards = cities.map(city  => (
         <CityCard city={city} key={city.id} isMock={isMock} />
     ))
     return (
 
         <div className="cards-list-wrapper">
-
             <div className="top">
-
                 <h2>Поиск городов</h2>
                 {isMock ? <SearchBarMock onSearch={searchCitiesMock}/> : <SearchBar query={query} setQuery={setQuery}  />}
-
-
-
             </div>
-
             <div className="bottom">
-
                 { cards }
-
             </div>
-
         </div>
     )
 }

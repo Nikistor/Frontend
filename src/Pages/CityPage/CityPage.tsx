@@ -79,7 +79,7 @@ const CityPage = ({ selectedCity, setSelectedCity }: { selectedCity:City | undef
 
                     <br />
 
-                    <span className="foundation_date">Год основания: {selectedCity?.foundation_date}г</span>
+                    <span className="foundation_date">Год основания: {selectedCity?.foundation_date} г.</span>
 
                     <br />
 
